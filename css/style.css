@@ -1,4 +1,11 @@
 /*
+ * Theme: Clu
+ * Theme URI: https://github.com/StourValleyDesigns/clu
+ * Description: A Sass based responsive grid layout
+ * Version: 1.0
+ * Author: Adam Chamberlin
+ */
+/*
  * CSS Reset
  */
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
@@ -24,6 +31,15 @@ audio:not([controls]) {
 [hidden], .hide {
   display: none; }
 
+img, object, embed {
+  max-width: 100%; }
+
+img {
+  height: auto; }
+
+/*
+ * The grid styles
+ */
 .clu {
   width: 100%;
   max-width: 1140px;
@@ -33,7 +49,10 @@ audio:not([controls]) {
 [class*="grid"] {
   background: #d1d1d1;
   margin: 0 1.75439% 0 0;
-  float: left; }
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .sark {
   margin-right: 0; }
@@ -88,7 +107,7 @@ body {
   line-height: 1.5000rem; }
 
 article {
-  max-width: 944px;
+  max-width: 100%;
   margin: auto; }
 
 h1 {
@@ -116,13 +135,9 @@ p, ul {
 small, aside {
   font-size: 0.6250rem; }
 
+/*
+ * All styles below this point are for styling your site
+ */
 .clu {
   margin-bottom: 1em; }
-
-@media handheld, only screen and (max-width: 768px) {
-  [class*="grid"] {
-    width: auto;
-    display: block;
-    float: none;
-    margin: 0; } }
 

@@ -29,3 +29,11 @@ audio:not([controls]) {
 [hidden], .hide {
   display: none;
 }
+
+img, object, embed {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
