@@ -32,9 +32,54 @@ audio:not([controls]) {
 
 [class*="grid"] {
   background: #d1d1d1;
-  margin: 0 10px 0 0;
+  margin: 0 1.75439% 0 0;
   float: left; }
 
+.sark {
+  margin-right: 0; }
+
+.grid-one {
+  width: 6.72515%; }
+
+.grid-two {
+  width: 15.20468%; }
+
+.grid-three {
+  width: 23.68421%; }
+
+.grid-four {
+  width: 32.16374%; }
+
+.grid-five {
+  width: 40.64327%; }
+
+.grid-six {
+  width: 49.12281%; }
+
+.grid-seven {
+  width: 57.60234%; }
+
+.grid-eight {
+  width: 66.08187%; }
+
+.grid-nine {
+  width: 74.5614%; }
+
+.grid-ten {
+  width: 83.04094%; }
+
+.grid-eleven {
+  width: 91.52047%; }
+
+.grid-twelve {
+  width: 100%; }
+
+@media handheld, only screen and (max-width: 768px) {
+  [class*="grid"] {
+    width: auto;
+    display: block;
+    float: none;
+    margin: 0; } }
 /*
  * Typography styling
  */
@@ -70,3 +115,14 @@ p, ul {
 
 small, aside {
   font-size: 0.6250rem; }
+
+.clu {
+  margin-bottom: 1em; }
+
+@media handheld, only screen and (max-width: 768px) {
+  [class*="grid"] {
+    width: auto;
+    display: block;
+    float: none;
+    margin: 0; } }
+

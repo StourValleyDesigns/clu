@@ -1,7 +1,25 @@
 
+$base_width: 1140; // Set the width of the containing elements
+$gutter_width: 20; // Set the width of the gutter between the columns
 
 @import "reset";
 
 @import "grid";
 
 @import "typography";
+
+.clu {
+  margin-bottom: 1em;
+}
+
+@media handheld, only screen and (max-width: 768px) {
+  .clu {
+  }
+
+  [class*="grid"] {
+    width: auto;
+	display: block;
+	float: none;
+	margin: 0;
+  }
+}
