@@ -1,0 +1,72 @@
+/*
+ * CSS Reset
+ */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden], .hide {
+  display: none; }
+
+.clu {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+[class*="grid"] {
+  background: #d1d1d1;
+  margin: 0 10px 0 0;
+  float: left; }
+
+/*
+ * Typography styling
+ */
+body {
+  font-size: 1.0000rem;
+  line-height: 1.5000rem; }
+
+article {
+  max-width: 944px;
+  margin: auto; }
+
+h1 {
+  font-size: 6.8750rem;
+  line-height: 7.5000rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem; }
+
+h2 {
+  font-size: 2.6250rem;
+  line-height: 3.0000rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem; }
+
+h3 {
+  font-size: 1.6250rem;
+  line-height: 3.0000rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem; }
+
+p, ul {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem; }
+
+small, aside {
+  font-size: 0.6250rem; }
