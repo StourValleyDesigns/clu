@@ -74,6 +74,50 @@ $colum_width: ($base_width - ($gutter_width * ($columns - 1))) / $columns;
   width: 100%;
 }
 
+.push-one {
+  margin-left: percentage( ($colum_width + $gutter_width) / $base_width);
+}
+
+.push-two {
+  margin-left: percentage( (($colum_width * 2) + ($gutter_width * 2)) / $base_width);
+}
+
+.push-three {
+  margin-left: percentage( (($colum_width * 3) + ($gutter_width * 3)) / $base_width);
+}
+
+.push-four {
+  margin-left: percentage( (($colum_width * 4) + ($gutter_width * 4)) / $base_width);
+}
+
+.push-five {
+  margin-left: percentage( (($colum_width * 5) + ($gutter_width * 5)) / $base_width);
+}
+
+.push-six {
+  margin-left: percentage( (($colum_width * 6) + ($gutter_width * 6)) / $base_width);
+}
+
+.push-seven {
+  margin-left: percentage( (($colum_width * 7) + ($gutter_width * 7)) / $base_width);
+}
+
+.push-eight {
+  margin-left: percentage( (($colum_width * 8) + ($gutter_width * 8)) / $base_width);
+}
+
+.push-nine {
+  margin-left: percentage( (($colum_width * 9) + ($gutter_width * 9)) / $base_width);
+}
+
+.push-ten {
+  margin-left: percentage( (($colum_width * 10) + ($gutter_width * 10)) / $base_width);
+}
+
+.push-eleven {
+  margin-left: percentage( (($colum_width * 11) + ($gutter_width * 11)) / $base_width);
+}
+
 // Basic media query for the main grid, feel free to add your own break-points in the main stylesheet if required.
 @media handheld, only screen and (max-width: 768px) {
   .clu {

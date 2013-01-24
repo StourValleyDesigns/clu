@@ -93,6 +93,39 @@ img {
 .grid-twelve {
   width: 100%; }
 
+.push-one {
+  margin-left: 8.47953%; }
+
+.push-two {
+  margin-left: 16.95906%; }
+
+.push-three {
+  margin-left: 25.4386%; }
+
+.push-four {
+  margin-left: 33.91813%; }
+
+.push-five {
+  margin-left: 42.39766%; }
+
+.push-six {
+  margin-left: 50.87719%; }
+
+.push-seven {
+  margin-left: 59.35673%; }
+
+.push-eight {
+  margin-left: 67.83626%; }
+
+.push-nine {
+  margin-left: 76.31579%; }
+
+.push-ten {
+  margin-left: 84.79532%; }
+
+.push-eleven {
+  margin-left: 93.27485%; }
+
 @media handheld, only screen and (max-width: 768px) {
   [class*="grid"] {
     width: auto;
@@ -140,4 +173,3 @@ small, aside {
  */
 .clu {
   margin-bottom: 1em; }
-
