@@ -1,23 +1,29 @@
-/*
- * Theme: Clu
- * Theme URI: https://github.com/StourValleyDesigns/clu
- * Description: A Sass based responsive grid layout
- * Version: 1.0
- * Author: Adam Chamberlin
+/*!
+ * Theme       : Clu
+ * Theme URI   : https://github.com/StourValleyDesigns/clu
+ * Description : A Sass based responsive grid layout
+ * Version     : 1.0
+ * Author      : Adam Chamberlin
+ * Author URI  : http://twitter.com/funkylarma
  */
 
-// Variables that can be configured to taylor your layout
-$base_width: 1140; // Set the width of the containing elements
-$gutter_width: 20; // Set the width of the gutter between the columns
+//
+// Import Sass stuff
+//
+@import "variables";
+@import "mixins";
 
-// Import a basic reset
+/*
+ * CSS Reset
+ */
 @import "reset";
 
-// Import the grid layout
-@import "grid";
-
-// Import a basic set of typography rules
+/*
+ * Typographic styles
+ */
 @import "typography";
+
+@import "grid";
 
 /*
  * All styles below this point are for styling your site
@@ -25,4 +31,12 @@ $gutter_width: 20; // Set the width of the gutter between the columns
 
 .clu {
   margin-bottom: 1em;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+p.content {
+  margin: 1em;
+  text-align: center;
+  background: #6a8cb7;
+  color: $white;
 }

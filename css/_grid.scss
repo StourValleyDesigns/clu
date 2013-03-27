@@ -2,131 +2,81 @@
  * The grid styles
  */
 
-// Set to 12 columns by default
-$columns: 12;
-$colum_width: ($base_width - ($gutter_width * ($columns - 1))) / $columns;
 
 .clu {
   width: 100%;
-  max-width: $base_width * 1px;
+  min-width: $palm_min + 0px;
+  max-width: $palm_max + 0px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 [class*="grid"] {
-  background: #d1d1d1;
-  margin: 0 percentage($gutter_width / $base_width) 0 0;
+  @include box-sizing();
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-.sark {
-  margin-right: 0;
+[class*="push"], [class*="pull"] {
+  position: relative;
+  @include box-sizing();
 }
 
-.grid-one {
-  width: percentage($colum_width / $base_width);
+@mixin grid-width($media_type:"palm") {
+  @for $i from 1 through 19 {
+    $num: $i * 5;
+    $percent: $num * 1%;
+    
+    .#{$media_type}-grid-#{$num} {
+      width: $percent;
+      
+      @if ($gutter != 0) {
+        $max_width: 0;
+        @if ($media_type == "palm" or $media_type == "") { $max_width: $palm_max };
+        @if ($media_type == "lap")  { $max_width: $lap_max };
+        @if ($media_type == "desk") { $max_width: $desk_max };
+        padding-right: percentage(($gutter / 2) / $max_width);
+        padding-left: percentage(($gutter / 2) / $max_width);
+      }
+    }
+    
+    .push-#{$media_type}-#{$num} {
+      left: $percent;
+    }
+    
+    .pull-#{$media_type}-#{$num} {
+      right: $percent;
+    }
+  }
 }
 
-.grid-two {
-  width: percentage( ($colum_width * 2 + $gutter_width) / $base_width);
-}
+@include grid-width();
 
-.grid-three {
-  width: percentage( ($colum_width * 3 + ($gutter_width * 2)) / $base_width);
-}
-
-.grid-four {
-  width: percentage( ($colum_width * 4 + ($gutter_width * 3)) / $base_width);
-}
-
-.grid-five {
-  width: percentage( ($colum_width * 5 + ($gutter_width * 4)) / $base_width);
-}
-
-.grid-six {
-  width: percentage( ($colum_width * 6 + ($gutter_width * 5)) / $base_width);
-}
-
-.grid-seven {
-  width: percentage( ($colum_width * 7 + ($gutter_width * 6)) / $base_width);
-}
-
-.grid-eight {
-  width: percentage( ($colum_width * 8 + ($gutter_width * 7)) / $base_width);
-}
-
-.grid-nine {
-  width: percentage( ($colum_width * 9 + ($gutter_width * 8)) / $base_width);
-}
-
-.grid-ten {
-  width: percentage( ($colum_width * 10 + ($gutter_width * 9)) / $base_width);
-}
-
-.grid-eleven {
-  width: percentage( ($colum_width * 11 + ($gutter_width * 10)) / $base_width);
-}
-
-.grid-twelve {
+.palm-grid-100 {
   width: 100%;
 }
 
-.push-one {
-  margin-left: percentage( ($colum_width + $gutter_width) / $base_width);
-}
-
-.push-two {
-  margin-left: percentage( (($colum_width * 2) + ($gutter_width * 2)) / $base_width);
-}
-
-.push-three {
-  margin-left: percentage( (($colum_width * 3) + ($gutter_width * 3)) / $base_width);
-}
-
-.push-four {
-  margin-left: percentage( (($colum_width * 4) + ($gutter_width * 4)) / $base_width);
-}
-
-.push-five {
-  margin-left: percentage( (($colum_width * 5) + ($gutter_width * 5)) / $base_width);
-}
-
-.push-six {
-  margin-left: percentage( (($colum_width * 6) + ($gutter_width * 6)) / $base_width);
-}
-
-.push-seven {
-  margin-left: percentage( (($colum_width * 7) + ($gutter_width * 7)) / $base_width);
-}
-
-.push-eight {
-  margin-left: percentage( (($colum_width * 8) + ($gutter_width * 8)) / $base_width);
-}
-
-.push-nine {
-  margin-left: percentage( (($colum_width * 9) + ($gutter_width * 9)) / $base_width);
-}
-
-.push-ten {
-  margin-left: percentage( (($colum_width * 10) + ($gutter_width * 10)) / $base_width);
-}
-
-.push-eleven {
-  margin-left: percentage( (($colum_width * 11) + ($gutter_width * 11)) / $base_width);
-}
-
-// Basic media query for the main grid, feel free to add your own break-points in the main stylesheet if required.
-@media handheld, only screen and (max-width: 768px) {
+@media screen and (min-width: $lap_min + 0px) {
+  @include grid-width("lap");
+  
+  .lap-grid-100 {
+    width: 100%;
+  }
+  
   .clu {
+    min-width: $lap_min + 0px;
+    max-width: $lap_max + 0px;
   }
+}
 
-  [class*="grid"] {
-    width: auto;
-	display: block;
-	float: none;
-	margin: 0;
+@media screen and (min-width: $desk_min + 0px) {
+  @include grid-width("desk");
+  
+  .desk-grid-100 {
+    width: 100%;
   }
+  
+  .clu {
+    min-width: $desk_min + 0px;
+    max-width: $desk_max + 0px;
+  } 
 }

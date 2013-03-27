@@ -1,0 +1,34 @@
+//
+// Variables
+//
+
+// Colours
+$white        : rgba(255, 255, 255, 1);
+$black        : rgba(0, 0, 0, 1);
+$darkgrey     : lighten($black, 25%);
+$grey         : lighten($black, 50%);
+$lightgrey    : lighten($black, 75%);
+$lightergrey  : lighten($black, 90%);
+$textcolor    : rgba(97, 97, 97, 1);
+$linkcolor    : rgba(0, 102, 204, 1);
+$linkhover    : rgba(0, 153, 255, 1);
+$basecolor    : rgba(45,53,62, 1);
+$bordercolor  : lighten($basecolor, 60%);
+
+// Typographic Stuff
+$basefont              : sans-serif;
+$altfont               : serif;
+$codefont              : monospace;
+$basefontsize          : 16;
+$baselineheight        : 1.5em;
+$baseheadingfont       : serif;;
+$baseheadingfontweight : bold;
+$baseheadingfontcolor  : inherit;
+
+$palm_min: 320;
+$palm_max: 480;
+$lap_min: $palm_max + 1;
+$lap_max: 1023;
+$desk_min: $lap_max + 1;
+$desk_max: 1440;
+$gutter  : 20 !default;

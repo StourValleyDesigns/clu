@@ -1,12 +1,12 @@
 /* TEAM */
-Author: Adam Chamberlin
-Contact: adam [at] stourvalleydesigns [dot] com
-Website: http://stourvalleydesigns.com
-Twitter: @funkylarma
+Author       : Adam Chamberlin
+Contact      : adam [at] stourvalleydesigns [dot] com
+Website      : http://stourvalleydesigns.com
+Twitter      : @funkylarma
 
 /* SITE */
-Last Updated: 03/09/2012
-Language: English
-Standards: html5 css3
-Components: Modernizr jQuery
-Software: Coda2
+Last Updated : 27/03/2013
+Language     : English
+Standards    : html5 css3
+Components   : Modernizr jQuery
+Software     : Coda2 CodeKit
